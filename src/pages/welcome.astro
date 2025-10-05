@@ -1,7 +1,7 @@
 ---
 import  TextLeyend  from '../components/TextLeyend.jsx';
 import SocialIcons from '../components/SocialIcons.jsx';
-
+import Avatar from '../components/Avatar.jsx';
 ---
 <section class="h-svh bg-gradient-to-b from-indigo-950 to-black relative">
     <div class="w-full md:max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center justify-center h-full">
@@ -10,8 +10,8 @@ import SocialIcons from '../components/SocialIcons.jsx';
             <TextLeyend client:load />
             <SocialIcons client:load />
         </div>
-        <div class="md:w-1/2 flex justify-center">
-            <img src="https://media.istockphoto.com/id/484234714/es/vector/ejemplo-de-azul-grunge-retro-aislado-de-la-firma.jpg?s=612x612&w=0&k=20&c=3lkz85_0ynUnU4P8UKyZ1bRVabYLfJOEPxYJB-I7N1E=" alt="Descripción de la imagen" class="w-3/4 rounded-lg shadow-lg" />
+        <div class="md:w-1/2 flex flex-col items-center">
+            <Avatar client:load />
         </div>
     </div>
 
