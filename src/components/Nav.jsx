@@ -4,7 +4,7 @@ export default function Nav() {
       <h1 className="text-4xl font-bold text-center">MR</h1>
     </div>
 
-    <nav className="flex gap-4 text-sm sm:text-base">
+    <nav className="flex gap-4 text-sm sm:text-base font-semibold">
       <a href="/about" className="hover:text-gray-400">About</a>
       <a href="/skills" className="hover:text-gray-400">Skills</a>
       <a href="/portfolio" className="hover:text-gray-400">Portfolio</a>
