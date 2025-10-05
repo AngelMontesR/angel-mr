@@ -40,7 +40,7 @@ export default function Nav() {
         href="/social"
         className="relative hover:text-pink-500 px-2 py-1 after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:bg-pink-500 after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full"
       >
-        Social
+        Contact
       </a>
     </nav>
 
