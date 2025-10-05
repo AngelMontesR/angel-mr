@@ -10,38 +10,38 @@ export default function Nav() {
 
       <nav className="flex gap-4 text-sm sm:text-base font-semibold">
         <a
-          href="/about"
+          href="#about"
           className="relative hover:text-green-500 px-2 py-1 after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full"
         >
-          About
+          Acerca de Mi
         </a>
 
         <a
-          href="/skills"
+          href="#skills"
           className="relative hover:text-green-500 px-2 py-1 after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full"
         >
-          Skills
+          Habilidades
         </a>
 
         <a
-          href="/portfolio"
+          href="#portfolio"
           className="relative hover:text-green-500 px-2 py-1 after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full"
         >
-          Portfolio
+          Portafolio
         </a>
 
         <a
-          href="/experiences"
+          href="#experiences"
           className="relative hover:text-green-500 px-2 py-1 after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full"
         >
-          Experience
+          Experiencia
         </a>
 
         <a
-          href="/social"
+          href="#social"
           className="relative hover:text-green-500 px-2 py-1 after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full"
         >
-          Contact
+          Contacto
         </a>
       </nav>
 
