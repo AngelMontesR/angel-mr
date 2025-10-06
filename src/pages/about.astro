@@ -1,32 +1,50 @@
 ---
-import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons"; // Importa icono de archivo genérico
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 ---
 
-<section class="h-auto border flex flex-col items-center p-20 space-y-8 mt-25 mb-20">
-    <div
-        class="flex flex-col md:flex-row items-center md:items-start w-full max-w-4xl space-y-6 md:space-y-0 md:space-x-12"
-    >
-        <div class="flex-shrink-0">
-            <img
-                src="..."
-                alt="Avatar"
-                class="w-64 h-64 rounded-full object-cover border-4 border-green-500"
-            />
-        </div>
-
-        <div class="flex-grow">
-            <h2 class="text-4xl font-bold text-gray-800">Acerca de mí</h2>
-            <p class="mt-4 text-gray-600">
-                Fanático de Javascript. Siempre buscando nuevas habilidades para
-                aprender. ...
-            </p>
-        </div>
+<section class="h-auto border flex flex-col items-center p-20 space-y-8 mt-25 mb-20" id="about">
+  <div
+    class="flex flex-col md:flex-row items-center md:items-start w-full max-w-4xl space-y-6 md:space-y-0 md:space-x-12"
+  >
+    <div class="flex-shrink-0">
+      <img
+        src="..."
+        alt="Avatar"
+        class="w-64 h-64 rounded-full object-cover border-4 border-green-500"
+      />
     </div>
 
-    <div class="w-full max-w-4xl pt-6 border-t border-gray-200">
-        <h3 class="text-2xl font-semibold mb-4">Contribuciones</h3>
-        <div class="bg-gray-100 p-4 rounded-lg">
-            [Espacio para el Calendario de Contribuciones]
-        </div>
+    <div class="flex-grow">
+      <h2
+        class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-bl from-green-400 to-indigo-700"
+      >
+        Acerca de mí
+      </h2>
+
+      <p
+        class="mt-6 text-gray-700 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto text-center"
+      >
+        Desarrollador con más de
+        <span
+          class="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent font-semibold"
+        >
+          5 años de experiencia
+        </span>
+        en TI. Me motiva crear
+        <span
+          class="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent font-medium"
+        >
+          soluciones eficientes y de calidad
+        </span>, aplicando buenas prácticas y explorando
+        <span class="text-indigo-300">nuevas tecnologías</span>
+        para afrontar retos innovadores.
+      </p>
     </div>
+  </div>
+
+
+  <div class="w-full max-w-4xl pt-6 border-t border-gray-700">
+    <h3 class="text-2xl font-semibold mb-4">Contribuciones</h3>
+
+  </div>
 </section>
