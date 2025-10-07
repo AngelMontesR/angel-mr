@@ -1,5 +1,5 @@
 export default function Nav() {
-  return <div className="fixed top-5 w-full flex justify-center z-50">
+  return <div className="fixed w-full flex justify-center z-50">
     <div className="w-full sm:w-11/12 md:max-w-7xl mx-auto flex items-center justify-between px-6 py-5 mt-5 rounded-2xl bg-black/60 backdrop-blur-md text-white trans">
       <div className="flex items-center justify-center">
         <h1 className="text-4xl font-bold text-center cursor-pointer">
