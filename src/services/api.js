@@ -1,8 +1,12 @@
-export async function fetchContributions(username: string) {
+export async function fetchContributions(username) {
+  const to = new Date();
+  const from = new Date();
+  from.setFullYear(to.getFullYear() - 1);
+
   const query = `
     query {
       user(login: "${username}") {
-        contributionsCollection {
+        contributionsCollection(from: "${from.toISOString()}", to: "${to.toISOString()}") {
           contributionCalendar {
             totalContributions
             weeks {
