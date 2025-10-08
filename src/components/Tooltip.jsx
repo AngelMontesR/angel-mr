@@ -19,7 +19,7 @@ export default function Tooltip({ text, children, position = "top" }) {
       {children}
       {visible && (
         <div
-          className={`absolute ${positions[position]} z-50 bg-gray-900 text-white text-xs rounded-lg px-2 py-1 whitespace-nowrap shadow-md`}
+          className={`absolute ${positions[position]} z-50 bg-indigo-950 text-white text-xs rounded-lg px-2 py-1 whitespace-nowrap shadow-md`}
         >
           {text}
         </div>
