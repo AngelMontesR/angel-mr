@@ -1,3 +1,6 @@
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 export default function CardPortafolio() {
   return (
     <div className="bg-white rounded-lg shadow-lg shadow-indigo-950">
@@ -13,9 +16,9 @@ export default function CardPortafolio() {
         </p>
         <a
           href="#"
-          className="text-green-500 hover:underline mt-2 inline-block"
+          className="text-indigo-950 hover:underline mt-2 inline-block"
         >
-          View Project
+            <FontAwesomeIcon icon={faGithub} size="2x"/>
         </a>
       </div>
     </div>

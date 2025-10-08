@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import Tooltip from './Tooltip'; // Asegúrate de que la ruta sea correcta
+import Tooltip from './Tooltip';
 
 export default function SocialIcons() {
   return (
