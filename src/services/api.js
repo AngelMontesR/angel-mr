@@ -3,6 +3,13 @@ export async function fetchContributions(username) {
   const from = new Date();
   from.setFullYear(to.getFullYear() - 1);
 
+  const token = import.meta.env.PUBLIC_GITHUB_TOKEN;
+  console.log("Token:", import.meta.env.PUBLIC_GITHUB_TOKEN ? "✅ Detectado" : "❌ No detectado");
+
+  if (!token) {
+    throw new Error("Falta el token de GitHub. Agrega PUBLIC_GITHUB_TOKEN en tu archivo .env");
+  }
+
   const query = `
     query {
       user(login: "${username}") {
@@ -26,15 +33,20 @@ export async function fetchContributions(username) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ query }),
   });
 
-  if (!response.ok) {
-    throw new Error(`GitHub API error: ${response.status}`);
+  const json = await response.json();
+
+
+
+  if (!response.ok || json.errors) {
+    throw new Error(
+      `GitHub API error: ${json.errors?.[0]?.message || response.status}`
+    );
   }
 
-  const json = await response.json();
   return json.data.user.contributionsCollection.contributionCalendar;
 }

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import ActivityCalendar from "react-activity-calendar";
+import { ActivityCalendar } from "react-activity-calendar";
 import { fetchContributions } from "../services/api.js";
 
 export default function GithubCalendar() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null); // Inicialmente null
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -25,6 +25,10 @@ export default function GithubCalendar() {
     });
   }, []);
 
+  if (!data) {
+    return <p style={{ color: "white", textAlign: "center" }}>Cargando calendario...</p>;
+  }
+
   return (
     <section style={{
       backgroundColor: "#0d1117",
@@ -33,9 +37,6 @@ export default function GithubCalendar() {
       borderRadius: "16px",
       boxShadow: "0 4px 12px rgba(0,0,0,0.4)",
     }}>
-      <h2 style={{ textAlign: "center", fontSize: "20px", marginBottom: "16px" }}>
-        Actividad de GitHub ({total} contribuciones en los últimos 12 meses)
-      </h2>
 
       <ActivityCalendar
         data={data}

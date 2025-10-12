@@ -3,10 +3,9 @@ import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import GithubCalendar from "../components/GithubCalendar";
 
 ---
-
-<section class="h-auto border flex flex-col items-center p-20 space-y-8 mt-3" id="about">
+<section class="h-full  flex flex-col items-center p-20 space-y-8" id="about">
   <div
-    class="flex flex-col md:flex-row items-center md:items-start w-full max-w-4xl space-y-6 md:space-y-0 md:space-x-12"
+    class="flex flex-col md:flex-row items-center md:items-start w-full max-w-4xl space-y-6 md:space-y-0 md:space-x-12 mt-20"
   >
     <div class="flex-shrink-0">
       <img
@@ -47,6 +46,6 @@ import GithubCalendar from "../components/GithubCalendar";
 
   <div class="w-full max-w-4xl pt-6 border-t border-gray-700">
     <h3 class="text-2xl font-semibold mb-4">Contribuciones</h3>
-      <!-- <GithubCalendar client:load/> -->
+      <GithubCalendar client:load/>
   </div>
 </section>
