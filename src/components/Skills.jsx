@@ -14,13 +14,13 @@ export default function SkillsCarousel() {
     "python.svg",
   ];
 
-  // Duplicamos los iconos para efecto infinito
-  const repeatedIcons = [...icons, ...icons, ...icons]; // triple repetición
+  const repeatedIcons = [...icons, ...icons];
 
   return (
+    <div className="overflow-hidden w-dvh mx-auto"> {/* contenedor más angosto */}
       <motion.div
-        className="flex gap-5 w-72"
-        animate={{ x: ["0%", "-33.33%"] }} // ahora se mueve un tercio, no la mitad
+        className="flex gap-5"
+        animate={{ x: ["0%", "-50%"] }}
         transition={{
           x: {
             repeat: Infinity,
@@ -39,5 +39,6 @@ export default function SkillsCarousel() {
           />
         ))}
       </motion.div>
+    </div>
   );
 }
