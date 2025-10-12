@@ -16,8 +16,6 @@ export default function Skills() {
 
   return (
     <div className="bg-gradient-to-l from-indigo-950 to-black py-12">
-      <h2 className="text-5xl font-bold text-center text-white mb-8">Skills</h2>
-
       <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
         {icons.map((icon, i) => (
           <Tooltip key={i} text={icon.name} position="top">
