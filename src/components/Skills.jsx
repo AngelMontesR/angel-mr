@@ -1,4 +1,5 @@
 import Tooltip from "./Tooltip";
+import './Skills.css'; // Importa el archivo CSS para la animación
 
 export default function Skills() {
   const icons = [
@@ -14,17 +15,28 @@ export default function Skills() {
     { src: "python.svg", name: "Python" },
   ];
 
+  // Duplicamos los iconos para asegurar la transición infinita y suave
+  const infiniteIcons = [...icons, ...icons];
+
   return (
-    <div className="bg-gradient-to-l from-indigo-950 to-black py-12">
-      <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
-        {icons.map((icon, i) => (
-          <Tooltip key={i} text={icon.name} position="top">
-            <img
-              src={`/icons/${icon.src}`}
-              alt={icon.name}
-              className="h-20 w-20 object-contain opacity-90 hover:opacity-100 transition"
-            />
-          </Tooltip>
+    <div className="overflow-hidden max-w-7xl mx-auto py-4 relative">
+
+      {/* Contenedor que se desplaza: usa flex, no-wrap y la clase de animación */}
+      <div className="flex flex-nowrap w-[200%] animate-scroll">
+        {infiniteIcons.map((icon, i) => (
+          // El 'flex-shrink-0' es CRUCIAL para que los elementos no se achiquen
+          <div
+            className="flex-shrink-0 mx-5 p-3 rounded-xl bg-white/5 hover:bg-gray-700 hover:rotate-6 transition duration-300"
+            key={i}
+          >
+            <Tooltip text={icon.name} position="top">
+              <img
+                src={`/icons/${icon.src}`}
+                alt={icon.name}
+                className="h-14 w-14 object-contain opacity-90 hover:opacity-100 transition"
+              />
+            </Tooltip>
+          </div>
         ))}
       </div>
     </div>
