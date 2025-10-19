@@ -10,7 +10,24 @@ export default function CardPortafolio() {
                 alt="Project 1"
                 className="w-full h-full object-cover transition-transform"
             />
-            <div className="absolute bottom-0 left-0 w-full h-1/2 bg-indigo-950 bg-opacity-50 flex flex-col justify-end p-5">
+
+            <div className="absolute top-0 right-0 p-1 flex space-x-3 bg-zinc-950/65 m-2 rounded-lg">
+                <a
+                    href="#"
+                    className="text-white hover:text-gray-200 transition-colors duration-200"
+                    aria-label="GitHub"
+                >
+                    <FontAwesomeIcon icon={faGithub} size="g" />
+                </a>
+                <a
+                    href="#"
+                    className="text-blue-400 hover:text-blue-600 transition-colors duration-200"
+                    aria-label="LinkedIn"
+                >
+                    <FontAwesomeIcon icon={faLinkedinIn} size="g" />
+                </a>
+            </div>
+            <div className="absolute bottom-0 left-0 w-full h-1/2 bg-indigo-950 bg-opacity-50 flex flex-col justify-start p-5">
                 <h3 className="text-white text-xl font-bold mb-2">Project One</h3>
                 <p className="text-gray-300 mb-4 text-sm">
                     A brief description of Project One. Resalta lo más importante.
@@ -18,22 +35,6 @@ export default function CardPortafolio() {
                         Ver más
                     </span>
                 </p>
-                <div className="flex space-x-4">
-                    <a
-                        href="#"
-                        className="text-white hover:text-gray-200 transition-colors duration-200"
-                        aria-label="GitHub"
-                    >
-                        <FontAwesomeIcon icon={faGithub} size="2x" />
-                    </a>
-                    <a
-                        href="#"
-                        className="text-blue-400 hover:text-blue-600 transition-colors duration-200"
-                        aria-label="LinkedIn"
-                    >
-                        <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
-                    </a>
-                </div>
             </div>
         </div>
     );
