@@ -7,6 +7,25 @@ import Title from "../components/Title.jsx";
         <div class="mb-8 text-center">
             <Title title="Contacto" />
         </div>
-
+        <div class="flex flex-col items-center">
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="w-full max-w-lg bg-white p-6 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nombre
+                        <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                    </label>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email
+                        <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                    </label>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Mensaje
+                        <textarea id="message" name="message" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"></textarea>
+                    </label>
+                    <div class="flex items-center justify-between">
+                        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar</button>
+                        <p class="text-gray-600 text-sm">Tu mensaje ha sido enviado.</p>
+                        <p class="text-gray-600 text-sm">Gracias por tu interés en contactarme. Responderé a tu mensaje lo antes posible.</p>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </section>
