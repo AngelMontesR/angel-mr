@@ -1,12 +1,11 @@
 ---
 import Skill from "../components/Skills.jsx";
+import Title from "../components/Title.jsx";
 ---
 
 <section id="skills" class="bg-gradient-to-l from-indigo-950 to-black py-12">
-    <h2
-        class="text-center text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-bl from-green-400 to-indigo-700"
-    >
-        Habilidades
-    </h2>
+    <div class="text-center">
+        <Title title="Habilidades" />
+    </div>
     <Skill client:load />
 </section>
