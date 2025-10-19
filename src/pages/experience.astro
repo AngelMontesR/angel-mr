@@ -1,13 +1,54 @@
 ---
 import Title from "../components/Title.jsx";
+import TimelineItem from '../components/TimelineItem.jsx'; // Importar el componente React
+// Importar los datos de la experiencia (puedes ponerlos aquí o en un JSON)
+const experienceData = [
+  {
+    title: "Desarrollador Full Stack",
+    company: "[Nombre de la Empresa]",
+    dates: "Ene 2023 - Actualidad",
+    tasks: [
+      "Liderazgo en la migración de un monolito a una arquitectura de microservicios.",
+      "Desarrollo de APIs RESTful utilizando Node.js y bases de datos PostgreSQL.",
+      "Optimización del rendimiento del frontend en React."
+    ]
+  },
+  {
+    title: "Desarrollador Frontend Junior",
+    company: "[Nombre de la Agencia]",
+    dates: "Jul 2021 - Dic 2022",
+    tasks: [
+      "Construcción de interfaces de usuario responsivas con Next.js y Tailwind CSS.",
+      "Mantenimiento y despliegue continuo de sitios web a través de Vercel y Netlify."
+    ]
+  }
+  // Añade más objetos de experiencia aquí
+];
 ---
 
-<section id="experiences" class="relative h-screen bg-indigo-900 overflow-hidden">
+<section id="experiences" class="bg-gradient-to-l from-indigo-950 to-black py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
-  <div class="max-w-7xl mx-auto h-full flex flex-col justify-start relative z-10">
-    <div class="mb-8 text-center mt-8">
-      <Title title="Experiencia" />
+        <div class="text-center mb-12">
+          <Title title="Experiencia Laboral" client:load />
+        </div>
+
+        <div class="relative wrap overflow-hidden p-10 h-full">
+
+            <div class="absolute border-r-2 border-opacity-20 border-indigo-300 h-full"
+                 style="left: 50%;">
+            </div>
+
+            {/* Mapeamos los datos y renderizamos el componente React animado */}
+            {experienceData.map((item, index) => (
+                <TimelineItem
+                    content={item}
+                    side={index % 2 === 0 ? "right" : "left"}
+                    index={index}
+                    client:load
+                />
+            ))}
+
+        </div>
     </div>
-    <p class="text-white text-lg mt-4 text-center">Aquí va la descripción de tu experiencia.</p>
-  </div>
 </section>
